@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/matiasf6/neuroisbe.examenes-neuro.com
+    - /bin/rsync -a --delete --exclude='.git' --exclude='.env' --exclude='vendor' --exclude='node_modules' --exclude='storage/logs/*.log' ./ $DEPLOYPATH
+    - cd $DEPLOYPATH && /opt/cpanel/composer/bin/composer install --no-dev --optimize-autoloader --no-interaction
+    - cd $DEPLOYPATH && /usr/local/bin/php artisan optimize
