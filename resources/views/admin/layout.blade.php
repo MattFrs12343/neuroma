@@ -26,13 +26,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m11.142 0L21.75 12l-4.179-2.25M12 5.25 15.75 7.5 12 9.75 8.25 7.5 12 5.25Zm0 11.25L15.75 14.25 12 16.5l-3.75-2.25L12 16.5Z"/></svg>
                     Admin
                 </span>
-                <form action="{{ route('admin.logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="flex items-center gap-1.5 px-3.5 py-2 border border-slate-200 hover:border-red-200 hover:text-red-600 hover:bg-red-50 text-slate-600 font-bold text-xs rounded-xl transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg>
-                        Sair
-                    </button>
-                </form>
+                <a href="{{ route('admin.logout') }}" class="flex items-center gap-1.5 px-3.5 py-2 border border-slate-200 hover:border-red-200 hover:text-red-600 hover:bg-red-50 text-slate-600 font-bold text-xs rounded-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg>
+                    Sair
+                </a>
             </div>
         </div>
     </header>

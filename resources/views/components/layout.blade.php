@@ -51,13 +51,10 @@
                 </span>
                 @endif
 
-                <form action="{{ $role === 'admin' ? route('admin.logout') : route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="flex items-center gap-1.5 px-3.5 py-2 border border-slate-200 hover:border-red-200 hover:text-red-600 hover:bg-red-50 text-slate-600 font-bold text-xs rounded-xl transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg>
-                        Sair
-                    </button>
-                </form>
+                <a href="{{ $role === 'admin' ? route('admin.logout') : route('logout') }}" class="flex items-center gap-1.5 px-3.5 py-2 border border-slate-200 hover:border-red-200 hover:text-red-600 hover:bg-red-50 text-slate-600 font-bold text-xs rounded-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg>
+                    Sair
+                </a>
 
             </div>
         </div>
