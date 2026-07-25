@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'showLogin'])->name('login.show');
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:10,1');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::match(['get', 'post'], '/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth.session');
@@ -37,7 +37,7 @@ Route::get('/administrar', [AdminAuthController::class, 'showLogin'])->name(
 Route::post('/administrar/login', [AdminAuthController::class, 'login'])->name(
     'admin.login',
 )->middleware('throttle:10,1');
-Route::post('/administrar/logout', [
+Route::match(['get', 'post'], '/administrar/logout', [
     AdminAuthController::class,
     'logout',
 ])->name('admin.logout');
