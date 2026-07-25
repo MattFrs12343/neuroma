@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Administrador - NeuroIsbe</title>
+    <title>Login Administrador - NeuroMB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         {{-- Branding --}}
         <div class="text-center mb-8">
             <h1 class="text-3xl font-black text-slate-800 tracking-tight">
-                <span class="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">Neuro</span>Isbe
+                <span class="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">Neuro</span>MB
             </h1>
             <p class="text-sm text-slate-400 font-medium mt-1">Painel de Administração</p>
         </div>
@@ -82,7 +82,7 @@
         </div>
 
         <p class="text-center text-xs text-slate-400 mt-6">
-            &copy; {{ date('Y') }} NeuroIsbe. Todos os direitos reservados.
+            &copy; {{ date('Y') }} NeuroMB. Todos os direitos reservados.
         </p>
     </div>
 
