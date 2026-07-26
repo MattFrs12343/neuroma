@@ -2,10 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/matiasf6/ma.examenes-neuro.com
-    - /bin/rsync -a --delete --exclude='.git' --exclude='.env' --exclude='vendor' --exclude='node_modules' --exclude='storage' ./ $DEPLOYPATH
+    - /bin/rsync -a --delete --exclude='.git' --exclude='.env' --exclude='vendor' --exclude='node_modules' --exclude='storage' --exclude='database/database.sqlite' ./ $DEPLOYPATH
     - /bin/chmod 755 $DEPLOYPATH
     - cd $DEPLOYPATH && /bin/mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache/data storage/logs storage/app/public storage/app/firebase
     - cd $DEPLOYPATH && /bin/chmod -R 775 storage bootstrap/cache
+    - cd $DEPLOYPATH && /usr/bin/touch database/database.sqlite && /bin/chmod 664 database/database.sqlite
     - cd $DEPLOYPATH && /opt/cpanel/composer/bin/composer install --no-dev --optimize-autoloader --no-interaction
     - cd $DEPLOYPATH && /usr/local/bin/php artisan storage:link
     - cd $DEPLOYPATH && /usr/local/bin/php artisan optimize
