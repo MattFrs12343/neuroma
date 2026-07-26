@@ -202,6 +202,9 @@ class FirebaseService
     private function parseFirestoreDocument($document)
     {
         $result = [];
+        if (empty($document['fields'])) {
+            return $result;
+        }
         foreach ($document['fields'] as $field => $value) {
             $valueType = array_key_first($value);
             $result[$field] = $value[$valueType];
