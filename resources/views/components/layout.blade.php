@@ -1,4 +1,4 @@
-@props(['role' => 'user', 'title' => 'Dashboard - NeuroMB'])
+@props(['role' => 'user', 'title' => 'Dashboard - NeuroSmart'])
 
 @php
     $bodyClass = match($role) {

@@ -22,7 +22,7 @@
             </button>
             <div>
                 <h1 class="text-sm font-bold truncate max-w-xs sm:max-w-md">Laudo Médico</h1>
-                <span class="text-[11px] text-slate-400 font-semibold block uppercase tracking-wider">NeuroMB</span>
+                <span class="text-[11px] text-slate-400 font-semibold block uppercase tracking-wider">NeuroSmart</span>
             </div>
         </div>
         <div class="flex items-center gap-2">
