@@ -191,7 +191,9 @@ class FirebaseService
             foreach ($response->json() as $item) {
                 if (isset($item['document'])) {
                     $data = $this->parseFirestoreDocument($item['document']);
-                    $tipos[$data['ID']] = $data['NOMBRE_ESTUDIO'];
+                    if (!empty($data['ID']) && !empty($data['NOMBRE_ESTUDIO'])) {
+                        $tipos[$data['ID']] = $data['NOMBRE_ESTUDIO'];
+                    }
                 }
             }
         }
