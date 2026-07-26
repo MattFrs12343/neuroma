@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/matiasf6/neurosmart.examenes-neuro.com
+    - export DEPLOYPATH=/home1/matiasf6/ma.examenes-neuro.com
     - /bin/rsync -a --delete --exclude='.git' --exclude='.env' --exclude='vendor' --exclude='node_modules' --exclude='storage' ./ $DEPLOYPATH
     - cd $DEPLOYPATH && /bin/mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache/data storage/logs storage/app/public storage/app/firebase
     - cd $DEPLOYPATH && /opt/cpanel/composer/bin/composer install --no-dev --optimize-autoloader --no-interaction
