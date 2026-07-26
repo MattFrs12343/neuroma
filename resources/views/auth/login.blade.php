@@ -18,7 +18,7 @@
         {{-- Branding --}}
         <div class="text-center mb-8">
             <h1 class="text-3xl font-black text-slate-800 tracking-tight">
-                <span class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Neuro</span>MB
+                <span class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Neuro</span>Smart
             </h1>
             <p class="text-sm text-slate-400 font-medium mt-1">Sistema de Laudos Neurológicos</p>
         </div>
